@@ -1,42 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Blog</title> 
-<style> 
-header{ 
-background-color: ##DCDCDC; 
-color:; #20B2AA
-text-align: center; 
-max-width: 800px; 
-margin: 0 auto; 
-padding: 16px; 
-} 
-main{ 
-background-color: #DCDCDC; 
-color: #20B2AA; 
-max-width: 800px; 
-margin: 0 auto; 
-padding: 16px; 
-} 
-img{ 
-width: 80px; 
-height: 80px; 
-} 
-</style> 
-</head> 
-<body> 
-<header> 
-<h1>O melhor do futebol</h1> 
-<p>Vou compartilhar conhecimentos sobre o futebol</p> </header> 
-<main> 
-<img src="logo.png" alt="Uma imagem no formato quadrado mostra um homem sorridente de meia-idade no centro, vestindo um cachecol listrado em vermelho, preto e branco, um boné cinza e uma jaqueta aberta. Ele aponta para a tela de um smartphone que segura na outra mão, onde se lê "BLOG DO FUTEBOL" com uma manchete sobre uma análise de jogo. O cenário ao fundo é um bar ou pub temático de futebol, com camisas emolduradas, flâmulas nas paredes de tijolos à vista, mesas de madeira e outras pessoas conversando ao fundo, criando uma atmosfera descontraída e de paixão pelo esporte.</h2> 
-<p>Por: Leonardo Agner Quinor</p> 
-<p>Fala, galera! Sejam muito bem-vindos ao meu espaço!</p> 
-<p>Todos me chamam de Leo, e criei o melhor do futebol — trazendo sempre tudo sobre futebol— para podermos sempre falar sobre esse esporte que tanto amamos,de um jeito leve,e engraçado. Por aqui,
-vou soltar as melhores indicações de jogos,falar onde esses jogos irão passar fazer o pré jogo acompanhar a partida com emoção e o pós jogo comentando tudo sobre esse jogo e vários outros��✨</p>
+<html lang="pt-br">
 
-</main> 
-</body> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Melhor do Futebol</title>
+    <style>
+        /* Estilos baseados no professor Marcelo para estrutura */
+        header {
+            background-color: #333; /* Uma cor escura para o fundo do cabeçalho */
+            color: #fff; /* Texto branco no cabeçalho */
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #f4f4f4; /* Uma cor clara para o fundo do conteúdo */
+            color: #333; /* Texto escuro no conteúdo */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            display: flex;
+            align-items: flex-start; /* Alinha os itens no topo do artigo */
+            margin-bottom: 20px; /* Espaçamento entre os posts */
+            border-bottom: 1px solid #ccc; /* Linha divisória suave */
+            padding-bottom: 20px;
+        }
+
+        /* Estilo para as imagens dos posts (80x80px) */
+        article img {
+            width: 80px;
+            height: 80px;
+            margin-right: 16px; /* Espaço entre a imagem e o texto */
+            object-fit: cover; /* Garante que a imagem preencha o quadrado sem distorcer */
+        }
+
+        article div {
+            flex: 1; /* Faz o texto ocupar o restante do espaço */
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>O melhor do futebol</h1>
+        <p>Vou compartilhar conhecimentos sobre o futebol</p>
+    </header>
+    <main>
+        <article>
+            <img src="O melhor do futebol.png"
+                alt="Irei falar sobre o futebol em geral e às vezes me aprofundar em jogos que fazem o mundo da bola acontecer,sempre com aquela resenha de sempre.">
+            <div>
+                <h2>Bem-Vindos ao mundo do futebol fã do esporte!</h2>
+                <p class="artigo-autor">Por: Leonardo Agner Quinor</p>
+                <p>Fala, galera! Sejam muito bem-vindos ao meu espaço! Todos me chamam de Leo, e criei o melhor do futebol — trazendo sempre tudo sobre futebol— para podermos sempre falar sobre esse esporte que tanto amamos,de um jeito leve,e engraçado.</p>
+                <p>Por aqui, vou soltar as melhores indicações de jogos,falar onde esses jogos irão passar fazer o pré jogo acompanhar a partida com emoção e o pós jogo comentando tudo sobre esse jogo e vários outros... ⚽✨</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        </main>
+</body>
+<script>
+    // Script do professor Marcelo para os botões funcionarem
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+</script>
+
 </html>
-
